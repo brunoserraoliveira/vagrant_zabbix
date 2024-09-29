@@ -1,0 +1,9 @@
+# Ignore Vagrant specific files
+.vagrant/
+
+# Ignore SSH keys
+*.pem
+*.key
+
+# Ignore log files
+*.log
