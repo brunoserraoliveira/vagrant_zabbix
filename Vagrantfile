@@ -1,8 +1,6 @@
-# [Provisionamento da MV para a instalação Zabbix]
-
   Vagrant.configure("2") do |config|
   
-    # Box definida: Ubuntu 22.04 (Jammy)
+    # Box: Ubuntu 22.04 
     config.vm.box = "ubuntu/jammy64"
     
     # Definir a quantidade de memória RAM, CPUs e nome da MV
