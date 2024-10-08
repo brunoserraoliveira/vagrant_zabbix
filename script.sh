@@ -1,5 +1,12 @@
 #!/bin/bash
 
+################################################# ZABBIX SERVER - UBUNTU 22.04 ############################################################
+
+# ALUNO: BRUNO OLIVEIRA
+# FORMAÇÃO DEVOPS - IAGO FERREIRA
+
+###########################################################################################################################################
+
 # Variáveis
 MYSQL_ROOT_PASSWORD="mysqlpwd"
 ZABBIX_DB="zabbix"
@@ -54,6 +61,3 @@ systemctl enable zabbix-server zabbix-agent apache2
 
 
 #######################################  FIM DA INSTALAÇÃO ###############################################################################
-
-# ALUNO: BRUNO OLIVEIRA
-# FORMAÇÃO DEVOPS - IAGO FERREIRA
