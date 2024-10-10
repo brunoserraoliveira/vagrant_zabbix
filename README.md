@@ -19,16 +19,16 @@ Neste laboratório, o objetivo foi criar um script de infraestrutura como códig
 
 
 
-Dados do banco:
+- **Dados do banco**:
 
-Database type - MySQL
-Database host - localhost
-Database port - 3306
-Database name - zabbix
-User          - zabbix
-Password      - zabbixpwd
+- **Database type** - MySQL
+- **Database host** - localhost
+- **Database port** - 3306
+- **Database name** - zabbix
+- **User**          - zabbix
+- **Password**      - zabbixpwd
 
-Logar no Zabbix:
+- **Logar no Zabbix**:
 
-Login - Admin
-Senha - zabbix
+- **Login** - Admin
+- **Senha** - zabbix
