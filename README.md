@@ -17,7 +17,7 @@ Neste laboratório, o objetivo foi criar um script de infraestrutura como códig
 
 ### Como acessar o banco pelo borwser
 
-
+ip_do_server/zabbix
 
 - **Dados do banco**:
 
