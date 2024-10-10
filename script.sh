@@ -7,6 +7,8 @@
 
 ###########################################################################################################################################
 
+#!/bin/bash
+
 # Variáveis
 MYSQL_ROOT_PASSWORD="mysqlpwd"
 ZABBIX_DB="zabbix"
@@ -24,10 +26,16 @@ sudo systemctl start mysql
 sudo systemctl enable mysql
 
 # Configurar a senha root do MySQL e reforçar a segurança inicial
-sudo mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '$MYSQL_ROOT_PASSWORD';"
-sudo mysql -e "DELETE FROM mysql.user WHERE User='';"  # Remover usuários anônimos
-sudo mysql -e "DROP DATABASE IF EXISTS test;"          # Remover banco de dados de teste
-sudo mysql -e "FLUSH PRIVILEGES;"                      # Atualizar as permissões
+sudo mysql -uroot <<EOF
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '$MYSQL_ROOT_PASSWORD';
+EOF
+
+# Remover usuários anônimos e banco de dados de teste
+sudo mysql -uroot -p$MYSQL_ROOT_PASSWORD <<EOF
+DELETE FROM mysql.user WHERE User='';
+DROP DATABASE IF EXISTS test;
+FLUSH PRIVILEGES;
+EOF
 
 # Configurar o banco de dados do Zabbix
 mysql -uroot -p$MYSQL_ROOT_PASSWORD <<EOF
@@ -58,6 +66,7 @@ sed -i "s/# DBPassword=/DBPassword=$ZABBIX_PASSWORD/" /etc/zabbix/zabbix_server.
 # Reiniciar e habilitar serviços
 systemctl restart zabbix-server zabbix-agent apache2
 systemctl enable zabbix-server zabbix-agent apache2
+
 
 
 #######################################  FIM DA INSTALAÇÃO ###############################################################################

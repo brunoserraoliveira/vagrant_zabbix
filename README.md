@@ -14,3 +14,21 @@ Neste laboratório, o objetivo foi criar um script de infraestrutura como códig
 - **CPU**: 2 CPUs
 - **ShellScript**
 - **Zabbix Server**
+
+### Como acessar o banco pelo borwser
+
+
+
+Dados do banco:
+
+Database type - MySQL
+Database host - localhost
+Database port - 3306
+Database name - zabbix
+User          - zabbix
+Password      - zabbixpwd
+
+Logar no Zabbix:
+
+Login - Admin
+Senha - zabbix

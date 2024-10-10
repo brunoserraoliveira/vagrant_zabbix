@@ -17,7 +17,7 @@
     # config.vm.network "forwarded_port", guest: 80, host: 8000
 
     # Static IP
-    config.vm.network "public_network", ip: "192.168.1.50"
+    config.vm.network "public_network", ip: "192.168.1.150"
 
   
   # Configurar as variáveis de ambiente e o fuso horário
